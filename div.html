@@ -1,0 +1,129 @@
+<!--A linha abaixo define o tipo de documento, qual seja,html-->
+<!DOCTYPE html>
+
+<!--A linha inicia o bloco de códigos em html, também define o atributo "lang", que é a linguagem do documento, para br (brasil)-->
+<html lang="br">
+    
+<!--A linha abaixo inicia o bloco de códigos que serão carregados no cabeçalho da página ,ou seja, serão carregadas antes do elemento-->
+<head>
+    <!--A linha abaixo define a variável de ambiente/atributo "charset" (tipo de caracter) para "UTF-8" (padrão universal de caracteres)-->
+    <meta charset="UTF-8">
+
+    <!--A linha abaixo define a variável de ambiente/atributo "name" ("nome"), da
+    variável/atributo do sistema "viewport", a qual receberá os valores definidos no 
+    próximo atributo "content", o qual receberá o conteúdo para uso da variável/atributo "viewport",
+     neste caso declarando a variável de sistema da seguinte forma: viewport="width=device-width, initial-scale=1.0"-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!--A linha abaixo é o título que vai aparecer na página quando ela rodar, ela vai aparecer em primeito -->
+    <title>Container</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+
+     <!--A linha abaixo carrega localmente os arquivos de configuração de estilos bootstrap.min.css, o qual contém estilos da página e dos elementos que a compõe -->
+    <link href="./bootstrap.min.css" rel="stylesheet">
+
+    <!--A linha abaixo carrega localmente o ícone da página que será exibido ao lado do título da página no navegador -->
+    <link rel="shortcut icon" href="./favicon.ico">
+
+    <!--A linha abaixo encerra o bloco de códigos do cabeçalho -->
+</head>
+
+ <!--A linha abaixo inicia o bloco de código tag <body> (corpo da página, que é igual ao objeto "document" invocado no javascript) -->
+<body>
+
+     <!--A linha abaixo é a div nescessária para funcionar corretamente o react -->
+    <div id="mydiv"></div>
+
+     <!--AS LINHAS ABAIXO SÃO NECESSÁRIAS PARA O CORRETO FUNCIONAMENTO DO REACT-->
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+    <!--A linha abaixo carrega a biblioteca bootstrap bootstrap.buble.min.js para funcionar corretamente o bootstrap-->
+    <script src="./bootstrap.bundle.min.js"></script>
+
+     <!-- <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script> -->
+     <!--A linha abaixo carrega a biblioteca de desenvolvimento do react react.development.js para funcionar corretamente o react -->
+    <script src="./react.development.js"></script>
+
+    <!-- <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script> -->
+    <!--A linha abaixo carrega a biblioteca popper popper.js para o uso de elementos como menus, tooltips e popovers no react-->
+    <script src="./popper.js"></script>
+
+    <!-- <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script> -->
+    <!--A linha abaixo carrega a biblioteca de desenvolvimento react-dom react-dom.development.js para uso de elementos virtuais no react -->
+    <script src="./react-dom.development.js"></script>
+
+    <!-- <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>-->
+    <!--A linha abaixo carrega a biblioteca babel babel.min.js para transpilar, via JavaScript, todo código react -->
+    <script src="./babel.min.js"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/react-router-dom/6.22.2/react-router-dom.production.min.js" integrity="sha512-82Gx5QtMrxGdjQk0W8k1+yVQL3mhQUMQJkBWfCp0IuGqyyYtxA1Sd4VfhdbZIPaEX2MEOSvy7Hb17w7zYRNfJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <!--A linha abaixo carrega a biblioteca de produção do componente react-router-dom, que serve para criar roteadores (caminhos) para o react -->
+    <script src="./react-router-dom.production.min.js"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
+    <!--A linha abaixo carrega a biblioteca de produção do componente jquery jquery-3.7.1.min.js, que serve para utilizar o "ajax" que conecta formulário com banco de dados no react-->
+    <script src="./jquery-3.7.1.min.js"></script>
+ 
+    <!--A linha abaixo inicia o bloco de códigos react, cujo atributo "type" é definido para "text/babel", que é o transpilador do código react -->
+    <script type="text/babel">
+
+        /**
+         A partir daqui são declarados todos os códigos em react
+         Para criar um elemento é necessário que o mesmo tenha uma referência, ou
+         seja, é necessário que se crie um atributo ref=nomeDaVariavelDeReferenci,
+         que declarada através de uma variável somente leitura (const), da seguinte forma:
+         */
+
+        //A linha abaixo declara a variável "variável", a qual receberá (=) o objeto "React", o qual invocará o método "createRef()", sem parâmetros (pois não há nada entre os parênteses).
+        const varConteiner = React.createRef();
+        
+        //A linha abaixo declara a variável somente leitura var_Conteiner, a qual receberá (=) todo código necessário para criar um Conteiner/componente, iniciando o bloco de códigos com um "abre parênteses" (
+        const var_Conteiner = (
+            // A linha abaixo cria o Conteiner/tag em html "Conteiner"
+            <div
+             //A linha abaixo cria o atributo "id", o qual receberá (=) o valor, entre chaves {}, em string também, ou seja, entre aspas duplas "varConteiner"
+             id={"varConteiner"}
+             //A linha abaixo cria o atributo "key", o qual receberá (=) o valor, entre chaves {}, em string também, ou seja, entre aspas duplas "varConteiner"
+             key={"varConteiner"}
+             //A linha abaixo cria o atributo "ref", o qual receberá (=) o valor, entre chaves {varConteiner}, da variável "varConteiner" declarada anteriormente
+             ref={varConteiner}
+             //A linha abaixo finaliza o bloco de códigos do Conteiner/componente <Conteiner>
+             >
+             // A linha abaixo declara o conteúdo dentro do Conteiner "Conteiner"
+             Conteúdo em texto normal, em números, etc...
+ 
+             //A linha abaixo fecha o bloco do Conteúdo do Conteiner
+            </div>
+            // a linha abaixo fecha o bloco de códigos var_Conteiner
+        );
+
+            
+// A linha abaixo declara a variavel ObjetoConteiner, a qual receberá (=) como "valor" uma "air function" () = => { /** bloco de código */ }, a qual retornará (return) a variével "var_Conteiner" declarada anteriormente, e inicia o bloco de códigos com "abre chaves" {
+const ObjetoConteiner = () => {
+
+// retorna (return) a variavel "var_Conteiner" declarada anteriormente
+return var_Conteiner
+
+// A linha abaixo encerra o bloco de códigos do ObjetoConteiner vom a chave invertida }
+}
+
+// A linha abaixo declara a variavel "container", a qual receberá (=) o valor em forma de objeto "document", o qual invocará o método ".getElementByid", cujo parâmetro enviado é o nome do Conteiner em string (aspas simles) dentro dos parênteses ('mydiv');
+const container = document.getElementById('mydiv');
+
+//A linha abaixo declara a variavel somente leitura (const) "root", a qual receberá (=) o valor em forma do objeto "ReactDOM", o qual invocara o método ".createRoot", cujo parametro enviado, entre parenteses, é a variavel (container) declarada anteriormente
+const root = ReactDOM.createRoot(container);
+
+// A linha abaixo, através do objeto/variavel "root" declarado anteriormente, invoca o método ".render", o qual receberá o parâmetro <ObjetoConteiner />, declarado anteriormente, entre tags </>
+root.render(<ObjetoConteiner/>); // renderizar via variável (contém o objeto a ser renderizado)
+
+// A linha abaixo encerra o bloco de códigos da tag <script type="text/babel">
+</script>
+
+<!--A linha abaixo encerra o bloco de códigos da tag <body>-->
+</body>
+
+<!-- A linha abaixo encerra o bloco de códigos da tag <html>-->
+</html>
+      
+
+            
